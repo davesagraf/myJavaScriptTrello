@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #modal.open {
+      display: block;
+    }
+
+    #overlay.open {
+      display: block;
+    }
+  </style>
+  <title>My Trello</title>
+</head>
+
+<body>
+  <div class="board">
+    <a href="#" class="add-list">
+      <img class="plus-icon" src="images/plus.svg" alt="Plus sign">
+      Add another list
+    </a>
+    <div class="hidden">
+      <form action="#" class="new-list">
+        <input name="new-list-title" id="new-list-title" placeholder="Enter list title..." class="form-input"></input>
+        <div class="form-buttons">
+          <button type="submit" class="submit">Add list</button>
+          <button class="cancel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+
+
+  <div class="create-task-hidden" id="modal">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
